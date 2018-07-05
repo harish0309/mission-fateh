@@ -1,0 +1,1 @@
+**This book is a practice book used for amazon interview.** 
