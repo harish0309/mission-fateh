@@ -28,6 +28,6 @@ public class BSTApp {
     bst.add(19);
     bst.add(17);
 
-    ZigZagOrSpiralUsingQueue.printSpiral(bst.getRoot());
+    System.out.println("Check for BST ? " + IsBinarySearchTree.isBST(bst.getRoot(), -99999, 99999));
   }
 }

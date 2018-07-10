@@ -22,7 +22,5 @@ public class PostOrderIterativeTraversal {
         while (!stack2.isEmpty()){
             System.out.print(" "+stack2.pop().data);
         }
-
     }
-
 }
