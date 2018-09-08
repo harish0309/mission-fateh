@@ -6,6 +6,6 @@ package ds.arrays.rotation;
 public class FindSumPairOnRotatedArrayProblem {
 
     public void solve(int[] a) {
-
+        //
     }
 }

@@ -13,7 +13,7 @@ public class HeapSort {
         System.out.println(A);
     }
 
-    public static void heapSort(int[] A, int s, int e) {
+    private static void heapSort(int[] A, int s, int e) {
         if (s >= e) {
             return;
         }
@@ -33,7 +33,7 @@ public class HeapSort {
     }
 
     private static boolean isMinHeap(int[] A, int s, int e) {
-        int lev = e % 2 == 0 ? (e - 2 / 2) : (e - 1) / 2;
+        int lev = e % 2 == 0 ? (e - 2) / 2 : (e - 1) / 2;
         for (int i = lev; i >= 0; i--) {
             if ((2 * i + 1) <= e && A[2 * i + 1] < A[i]) {
                 return false;
@@ -46,7 +46,7 @@ public class HeapSort {
     }
 
     private static boolean isMaxHeap(int[] A, int s, int e) {
-        int lev = e % 2 == 0 ? (e - 2 / 2) : (e - 1) / 2;
+        int lev = e % 2 == 0 ? (e - 2) / 2 : (e - 1) / 2;
         for (int i = lev; i >= 0; i--) {
             if ((2 * i + 1) <= e && A[2 * i + 1] > A[i]) {
                 return false;
@@ -58,8 +58,8 @@ public class HeapSort {
         return true;
     }
 
-    public static void minHeapify(int[] A, int s, int e) {
-        int lev = e % 2 == 0 ? (e - 2 / 2) : (e - 1) / 2;
+    private static void minHeapify(int[] A, int s, int e) {
+        int lev = e % 2 == 0 ? (e - 2) / 2 : (e - 1) / 2;
         for (int i = lev; i >= 0; i--) {
             if ((2 * i + 1) <= e && A[2 * i + 1] < A[i]) {
                 int temp = A[2 * i + 1];
@@ -74,8 +74,8 @@ public class HeapSort {
         }
     }
 
-    public static void maxHeapify(int[] A, int s, int e) {
-        int lev = e % 2 == 0 ? (e - 2 / 2) : (e - 1) / 2;
+    private static void maxHeapify(int[] A, int s, int e) {
+        int lev = e % 2 == 0 ? (e - 2) / 2 : (e - 1) / 2;
         for (int i = lev; i >= 0; i--) {
             if ((2 * i + 1) <= e && A[2 * i + 1] > A[i]) {
                 int temp = A[2 * i + 1];
@@ -89,6 +89,4 @@ public class HeapSort {
             }
         }
     }
-
-
 }
