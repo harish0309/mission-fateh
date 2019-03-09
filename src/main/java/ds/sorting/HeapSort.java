@@ -1,5 +1,7 @@
 package ds.sorting;
 
+import java.util.Arrays;
+
 /**
  * Created by HARISH on 08- 09- 2018
  */
@@ -10,7 +12,7 @@ public class HeapSort {
         int s = 0;
         int e = A.length - 1;
         heapSort(A, s, e);
-        System.out.println(A);
+        System.out.println(Arrays.toString(A));
     }
 
     private static void heapSort(int[] A, int s, int e) {
