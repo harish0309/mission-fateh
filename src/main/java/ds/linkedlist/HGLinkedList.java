@@ -4,11 +4,15 @@ package ds.linkedlist;
 public class HGLinkedList<T> {
   private Node<T> head;
 
-    public Node<T> getHead() {
-        return head;
-    }
+  public Node<T> getHead() {
+    return head;
+  }
 
-    public Node<T> insert(T data) {
+  public void setHead(Node<T> head) {
+    this.head = head;
+  }
+
+  public Node<T> insert(T data) {
     Node<T> n = new Node<>(data);
     if (head == null) {
       head = n;
