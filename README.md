@@ -1,1 +1,1 @@
-**This book is a practice book used for amazon interview.** 
+**This book is for practicing datasturcture problems and algorithms**
