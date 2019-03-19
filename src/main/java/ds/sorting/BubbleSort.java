@@ -10,7 +10,7 @@ public class BubbleSort {
         Arrays.stream(a).forEach(System.out::println);
     }
 
-    private static void sort(int[] input, int size) {
+    public static int[] sort(int[] input, int size) {
         int temp;
         for (int i = 0; i < size - 1; i++) {
             int flag = 0;
@@ -26,5 +26,6 @@ public class BubbleSort {
                 break;
             }
         }
+        return input;
     }
 }
