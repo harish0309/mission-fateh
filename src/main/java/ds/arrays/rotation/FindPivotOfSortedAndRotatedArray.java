@@ -10,21 +10,27 @@ public class FindPivotOfSortedAndRotatedArray {
     int e = n - 1;
     int m = 0;
 
-    while (true) {
-      m = s + (e - s) / 2;
-      if (m == s || m == e) {
-        m = s;
-        break;
-      }
-      if (A[s] < A[m]) {
-        s = m; // pivot is towards right
-        continue;
-      }
-      if (A[s] > A[m]) {
-        e = m; // pivot is towards left
-      }
-    }
+    m = findPivot(A, s, e);
 
     System.out.println("Pivot index :: " + m);
+  }
+
+  public static int findPivot(int[] A, int start, int end) {
+    int m;
+    while (true) {
+      m = start + (end - start) / 2;
+      if (m == start || m == end) {
+        m = start;
+        break;
+      }
+      if (A[start] < A[m]) {
+        start = m; // pivot is towards right
+        continue;
+      }
+      if (A[start] > A[m]) {
+        end = m; // pivot is towards left
+      }
+    }
+    return m;
   }
 }
