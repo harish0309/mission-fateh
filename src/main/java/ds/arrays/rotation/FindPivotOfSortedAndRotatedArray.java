@@ -4,7 +4,7 @@ package ds.arrays.rotation;
 public class FindPivotOfSortedAndRotatedArray {
 
   public static void main(String[] args) {
-    int[] A = {4, 5, 1, 2, 3};
+    int[] A = {11, 15, 16, 18, 19, 110};
     int n = A.length;
     int s = 0;
     int e = n - 1;
@@ -13,7 +13,7 @@ public class FindPivotOfSortedAndRotatedArray {
     while (true) {
       m = s + (e - s) / 2;
       if (m == s || m == e) {
-       m = e;
+        m = s;
         break;
       }
       if (A[s] < A[m]) {
