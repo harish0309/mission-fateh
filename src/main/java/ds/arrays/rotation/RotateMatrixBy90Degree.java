@@ -20,7 +20,10 @@ public class RotateMatrixBy90Degree {
 
   public static void main(String[] args) {
 
-    int a[][] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+    int a[][] = {{1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}};
     RotateMatrixBy90Degree matrix = new RotateMatrixBy90Degree();
     int[][] ans = matrix.rotate(a, 4, 4);
     for (int r = 0; r < 4; r++) {
