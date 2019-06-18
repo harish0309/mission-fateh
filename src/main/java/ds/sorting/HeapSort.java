@@ -21,16 +21,13 @@ public class HeapSort {
         }
         if (!isMaxHeap(A, s, e)) {
             maxHeapify(A, s, e);
-            int temp = A[s];
-            A[s] = A[e];
-            A[e] = temp;
-            e--;
-        } else {
-            int temp = A[s];
-            A[s] = A[e];
-            A[e] = temp;
-            e--;
         }
+        // swap the first element(since it is largest) with the last element
+        // AND reduce the size of array
+        int temp = A[s];
+        A[s] = A[e];
+        A[e] = temp;
+        e--;
         heapSort(A, s, e);
     }
 
