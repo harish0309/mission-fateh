@@ -11,7 +11,7 @@ public class CoinChangeProblem {
   }
 
   public void solve(int[] coins, int max) {
-    int[] A = new int[max + 1];
+    int[] A = new int [max + 1];
     A[0] = 0;
     int[] R = new int[max + 1];
     R[0] = 0;

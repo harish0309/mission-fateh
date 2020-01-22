@@ -10,7 +10,7 @@ public class FindWordRankInDictionary {
   String word = "STANDUPCOM";
 
   public static void main(String[] args) {
-    String str = "STANDUPCOM";
+    String str = "CORN";
     int n = str.length();
     FindWordRankInDictionary permutation = new FindWordRankInDictionary();
     String sortedStr = permutation.sort(str);

@@ -6,18 +6,18 @@ package ds.arrays.rotation;
 public class FindPivotOfSortedAndRotatedArray {
 
     public static void main(String[] args) {
-        int[] A = {4, 5, 1, 2, 3};
+        int[] A = {3, 4, 5, 6, 7, 8, 9, 10, 1, 2};
         int n = A.length;
         int s = 0;
         int e = n - 1;
         int m = 0;
 
-        m = findPivot(A, s, e);
+        m = new FindPivotOfSortedAndRotatedArray().findPivot(A, s, e);
 
         System.out.println("Pivot index :: " + m);
     }
 
-    public static int findPivot(int[] A, int s, int e) {
+    public int findPivot(int[] A, int s, int e) {
         int mid = -1;
 
         while (s <= e) {

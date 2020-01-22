@@ -5,9 +5,18 @@ package ds.arrays;
  */
 public class SolveRatMazeAllDirection {
 
+    static int finalSum = -1;
+
+    public static void main(String[] args) {
+        int[][] A = {{1, 1, 1, 1}, {0, 0, 0, 0}, {0, 1, 0, 1}, {1, 1, 9, 1}, {0, 0, 1, 1}};
+        int[][] sol = {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
+        solve(A, 5, 4, 0, 0, sol);
+        System.out.println(finalSum);
+
+    }
 
     public static void solve(int M[][], int nR, int nC, int r, int c, int[][] sol) {
-        if (r > nR - 1 || r < 0 || c > nR - 1 || c < 0 || M[r][c] == 0) {
+        if (r > nR - 1 || r < 0 || c > nC - 1 || c < 0 || M[r][c] == 0) {
             return; // check if position is out of range or check for valid path
         }
 
@@ -37,6 +46,11 @@ public class SolveRatMazeAllDirection {
                 sum += sol[i][j];
             }
         }
-        System.out.println(sum);
+        if (finalSum == -1) {
+            finalSum = sum;
+        }
+        if (sum < finalSum) {
+            finalSum = sum;
+        }
     }
 }
