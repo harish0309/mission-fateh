@@ -19,6 +19,9 @@ public class ConvertBinaryTreeToInorderDoublyLL {
     bst.add(15);
     bst.add(30);
 
+    // Expected Output (Inorder Doubly Linked List)
+    // = 3 = 5 = 8 = 10 = 15 = 20 = 30 =
+
     Node root = bst.getRoot();
     Node head = null;
     Node prev = null;
