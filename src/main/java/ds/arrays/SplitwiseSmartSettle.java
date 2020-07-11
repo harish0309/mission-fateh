@@ -1,12 +1,13 @@
 package ds.arrays;
 
-/** Created by HARISH on 11- 07- 2020
+/**
+ * Created by HARISH on 11- 07- 2020
  *
- *
- *
- * https://www.geeksforgeeks.org/minimize-cash-flow-among-given-set-friends-borrowed-money/
- * */
+ * <p>https://www.geeksforgeeks.org/minimize-cash-flow-among-given-set-friends-borrowed-money/
+ */
 public class SplitwiseSmartSettle {
+
+  static String[] persons = {"A", "B", "C"};
 
   public static void main(String[] args) {
     // A has to Pay 1000 to B
@@ -34,7 +35,7 @@ public class SplitwiseSmartSettle {
     netAmount[maxReceiver] -= min;
     netAmount[maxPayer] += min;
 
-    System.out.printf("Person(%s) pays %d to Person(%s)\n", maxPayer, min, maxReceiver);
+    System.out.println(persons[maxPayer] + " pays Rs. " + min + " to " + persons[maxReceiver]);
 
     minimizeCashflow(netAmount);
   }
