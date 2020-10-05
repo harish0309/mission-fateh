@@ -10,6 +10,9 @@ public class TopologicalSort {
 
   public static void main(String[] args) {
 
+    // Adjacency Matrix
+    // Output = 5, 3, 2, 1, 0, 6, 4
+
     int[][] M =
         new int[][] {
           {0, 1, 1, 0, 0, 0, 0},
